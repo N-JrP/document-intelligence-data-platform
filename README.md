@@ -89,7 +89,9 @@ Python • SQL • DuckDB • dbt • Pandas • Streamlit • FAISS • Sentenc
 
 ```bash
 conda activate doc_rag_project
-
+python src\run_pipeline.py
+streamlit run src\app.py
+```
 ---
 
 ## 🔮 Future Improvements
@@ -97,5 +99,3 @@ conda activate doc_rag_project
 - Add real-time data ingestion (API / streaming)
 - Improve retrieval with hybrid search (metadata + embeddings)
 - Deploy using scalable cloud data warehouse (BigQuery / Snowflake)
-python src\run_pipeline.py
-streamlit run src\app.py
