@@ -2,183 +2,185 @@
 
 
 
-End-to-end local data platform that ingests unstructured documents, transforms them into structured datasets, models them in DuckDB with dbt, validates data quality, and serves an AI-powered retrieval interface using embeddings and FAISS.
+End-to-end data platform for transforming unstructured business documents into structured analytics and AI-powered search.
 
 
 
-\## Features
+\---
 
 
 
-\- Raw-to-bronze-to-silver data pipeline
+\## 🚀 Live App
 
-\- Structured metadata extraction
 
-\- DuckDB warehouse
 
-\- dbt staging and mart models
+\[!\[Open in Streamlit](https://static.streamlit.io/badges/streamlit\_badge\_black\_white.svg)](PASTE\_YOUR\_STREAMLIT\_URL\_HERE)
 
-\- Data quality checks
 
-\- Embeddings + FAISS retrieval
 
-\- Streamlit analytics and Q\&A app
+\---
 
-\- One-command pipeline execution
 
 
+\## 🧠 Business Problem
 
-\## Tech Stack
 
 
+Organizations store critical operational data in unstructured formats such as:
 
-\- Python
+\- insurance claims
 
-\- SQL
+\- support tickets
 
-\- DuckDB
+\- policy documents
 
-\- dbt
+\- incident reports
 
-\- Streamlit
 
-\- Sentence Transformers
 
-\- FAISS
+This makes it difficult to:
 
-\- Pandas
+\- analyze trends
 
+\- extract insights
 
+\- search information efficiently
 
-\## Project Structure
 
 
+\---
 
-document-intelligence-data-platform/
 
-├── data/
 
-│   ├── raw/
+\## 💡 Solution
 
-│   ├── bronze/
 
-│   └── silver/
 
-├── src/
+This project converts unstructured documents into a structured data platform and enables semantic AI search.
 
-│   ├── ingest.py
 
-│   ├── transform.py
 
-│   ├── load\_warehouse.py
+It combines:
 
-│   ├── validate.py
+\- data engineering pipeline
 
-│   ├── build\_index.py
+\- analytics modeling
 
-│   ├── run\_pipeline.py
+\- AI-based document retrieval
 
-│   └── app.py
 
-├── warehouse/
 
-├── dbt\_project/
+\---
 
-│   └── models/
 
-├── requirements.txt
 
-├── .gitignore
+\## ⚙️ What it does
 
-└── README.md
 
 
+\- Ingests raw document data  
 
-\## Data Model
+\- Extracts structured fields (type, status, region, amount)  
 
+\- Loads into DuckDB warehouse  
 
+\- Builds analytics models using dbt  
 
-Each document is processed into these fields:
+\- Runs data quality checks  
 
+\- Creates embeddings for semantic search  
 
+\- Provides Streamlit dashboard + AI query interface  
 
-\- document\_id
 
-\- document\_name
 
-\- document\_type
+\---
 
-\- source\_system
 
-\- status
 
-\- region
+\## 📊 Business Impact
 
-\- amount
 
-\- issue\_type
 
-\- summary
+\- Faster document search using AI retrieval  
 
-\- text\_length
+\- Structured analytics from unstructured data  
 
-\- text
+\- Improved visibility into claims, support, and incidents  
 
+\- Enables decision-making using real-time insights  
 
 
-\## Example Business Questions
 
+\---
 
 
-\- Which claim documents are approved?
 
-\- Which support issues are open?
+\## 🛠 Tech Stack
 
-\- What documents mention reimbursement?
 
-\- Which travel documents have high amounts?
 
+Python • SQL • DuckDB • dbt • Pandas • Streamlit • FAISS • Sentence Transformers
 
 
-\## How to Run
 
+\---
 
 
-\### 1. Activate environment
+
+\## 📈 Key Features
+
+
+
+\- ETL pipeline (raw → bronze → silver → warehouse)  
+
+\- dbt models (staging + marts)  
+
+\- data quality validation  
+
+\- analytics dashboards (counts, amounts)  
+
+\- AI document retrieval (RAG-style search)  
+
+\- filtering by document type \& status  
+
+\- similarity-based search results  
+
+
+
+\---
+
+
+
+\## 🔍 Example Queries
+
+
+
+\- insurance claim  
+
+\- payment failure  
+
+\- travel reimbursement  
+
+\- login issue  
+
+\- policy update Berlin  
+
+
+
+\---
+
+
+
+\## ▶️ Run Locally
+
+
+
+```bash
 
 conda activate doc\_rag\_project
 
-
-
-\### 2. Run full pipeline
-
 python src\\run\_pipeline.py
 
-
-
-\### 3. Start the app
-
 streamlit run src\\app.py
-
-
-
-\## What This Project Demonstrates
-
-
-
-\- Python-based ETL/ELT
-
-\- SQL modeling
-
-\- Data warehousing with DuckDB
-
-\- dbt transformations
-
-\- Validation and data quality checks
-
-\- RAG / embeddings / vector search
-
-\- AI-assisted document retrieval
-
-\- Basic product analytics dashboard
 
