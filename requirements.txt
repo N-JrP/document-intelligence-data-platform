@@ -1,0 +1,9 @@
+pandas
+duckdb
+streamlit
+sentence-transformers
+faiss-cpu
+dbt-core
+dbt-duckdb
+python-dotenv
+numpy
