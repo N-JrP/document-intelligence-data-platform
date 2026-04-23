@@ -44,7 +44,8 @@ It combines:
 - Builds analytics models using dbt  
 - Runs data quality checks  
 - Creates embeddings for semantic search  
-- Provides Streamlit dashboard + AI query interface  
+- Provides Streamlit dashboard + AI query interface
+- Orchestrates pipeline execution with a production-style runner (task sequencing, logging, failure handling)
 
 ---
 
